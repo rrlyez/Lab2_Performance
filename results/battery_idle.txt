@@ -1,0 +1,6 @@
+Power source: battery
+Duration: 60.0003 s
+Energy before: 54820000 uWh
+Energy after: 54530000 uWh
+Idle energy: 1044.0000 J
+Idle average power: 17.3999 W

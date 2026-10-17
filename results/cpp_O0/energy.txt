@@ -1,0 +1,10 @@
+Version: O0
+Zone: package-0
+Runs: 10
+Idle average power: 4.0878 W
+Batch duration: 35.7829 s
+Batch energy: 733.3634 J
+Average power during batch: 20.4948 W
+Mean duration per run: 3.5783 s
+Mean package energy per run: 73.3363 J
+Estimated energy above idle per run: 58.7090 J

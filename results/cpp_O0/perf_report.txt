@@ -1,0 +1,1330 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 51  of event 'cpu_atom/cycles/Pu'
+# Event count (approx.): 72430799
+#
+# Children      Self  Command          Shared Object         Symbol                                                                                                                        
+# ........  ........  ...............  ....................  ..............................................................................................................................
+#
+    99.96%     0.00%  tree_benchmark_  tree_benchmark_O0     [.] main
+            |
+            ---std::allocator<float>::~allocator() (inlined)
+               |          
+               |--48.39%--0x400574
+               |          |          
+               |          |--11.65%--0x4008ca
+               |          |          |          
+               |          |           --8.13%--0x4008a6
+               |          |          
+               |           --7.48%--0x4008a6
+               |          
+               |--30.39%--0x4005c1
+               |          0x400978
+               |          0x400cf1
+               |          0x40104b
+               |          0x4011d8
+               |          0x401397
+               |          0x401397
+               |          0x401397
+               |          0x401397
+               |          0x4017e2
+               |          |          
+               |           --8.65%--0xffffffffbbe01280
+               |          
+               |--8.97%--std::vector<float, std::allocator<float> >::vector(unsigned long, std::allocator<float> const&)
+               |          std::vector<float, std::allocator<float> >::_M_default_initialize(unsigned long)
+               |          float* std::__uninitialized_default_n_a<float*, unsigned long, float>(float*, unsigned long, std::allocator<float>&)
+               |          float* std::__uninitialized_default_n<float*, unsigned long>(float*, unsigned long)
+               |          float* std::__uninitialized_default_n_1<true>::__uninit_default_n<float*, unsigned long>(float*, unsigned long)
+               |          float* std::fill_n<float*, unsigned long, float>(float*, unsigned long, float const&) (inlined)
+               |          float* std::__fill_n_a<float*, unsigned long, float>(float*, unsigned long, float const&, std::random_access_iterator_tag) (inlined)
+               |          void std::__fill_a<float*, float>(float*, float*, float const&) (inlined)
+               |          void std::__fill_a1<float*, float>(float*, float*, float const&)
+               |          |          
+               |           --3.01%--0xffffffffbbe01280
+               |          
+               |--7.93%--0x400896
+               |          
+                --4.29%--0x400922
+
+    91.00%     0.00%  tree_benchmark_  tree_benchmark_O0     [.] _start
+            |
+            ---_start
+               __libc_start_main@@GLIBC_2.34
+               __libc_start_call_main
+               main
+               |          
+               |--48.39%--count_less_than_threshold(std::vector<float, std::allocator<float> > const&, float)
+               |          |          
+               |          |--11.65%--std::vector<float, std::allocator<float> >::operator[](unsigned long) const
+               |          |          |          
+               |          |           --8.13%--std::vector<float, std::allocator<float> >::size() const
+               |          |          
+               |           --7.48%--std::vector<float, std::allocator<float> >::size() const
+               |          
+               |--30.39%--std::allocator<float>::~allocator() (inlined)
+               |          std::vector<float, std::allocator<float> >::vector(unsigned long, std::allocator<float> const&)
+               |          std::vector<float, std::allocator<float> >::_M_default_initialize(unsigned long)
+               |          float* std::__uninitialized_default_n_a<float*, unsigned long, float>(float*, unsigned long, std::allocator<float>&)
+               |          float* std::__uninitialized_default_n<float*, unsigned long>(float*, unsigned long)
+               |          float* std::__uninitialized_default_n_1<true>::__uninit_default_n<float*, unsigned long>(float*, unsigned long)
+               |          float* std::fill_n<float*, unsigned long, float>(float*, unsigned long, float const&) (inlined)
+               |          float* std::__fill_n_a<float*, unsigned long, float>(float*, unsigned long, float const&, std::random_access_iterator_tag) (inlined)
+               |          void std::__fill_a<float*, float>(float*, float*, float const&) (inlined)
+               |          void std::__fill_a1<float*, float>(float*, float*, float const&)
+               |          |          
+               |           --8.65%--0xffffffffbbe01280
+               |          
+               |--7.93%--std::vector<float, std::allocator<float> >::size() const
+               |          
+                --4.29%--std::vector<float, std::allocator<float> >::operator[](unsigned long) const
+
+    91.00%     0.00%  tree_benchmark_  libc.so.6             [.] __libc_start_main@@GLIBC_2.34
+            |
+            ---__libc_start_main@@GLIBC_2.34
+               __libc_start_call_main
+               main
+               |          
+               |--48.39%--count_less_than_threshold(std::vector<float, std::allocator<float> > const&, float)
+               |          |          
+               |          |--11.65%--std::vector<float, std::allocator<float> >::operator[](unsigned long) const
+               |          |          |          
+               |          |           --8.13%--std::vector<float, std::allocator<float> >::size() const
+               |          |          
+               |           --7.48%--std::vector<float, std::allocator<float> >::size() const
+               |          
+               |--30.39%--std::allocator<float>::~allocator() (inlined)
+               |          std::vector<float, std::allocator<float> >::vector(unsigned long, std::allocator<float> const&)
+               |          std::vector<float, std::allocator<float> >::_M_default_initialize(unsigned long)
+               |          float* std::__uninitialized_default_n_a<float*, unsigned long, float>(float*, unsigned long, std::allocator<float>&)
+               |          float* std::__uninitialized_default_n<float*, unsigned long>(float*, unsigned long)
+               |          float* std::__uninitialized_default_n_1<true>::__uninit_default_n<float*, unsigned long>(float*, unsigned long)
+               |          float* std::fill_n<float*, unsigned long, float>(float*, unsigned long, float const&) (inlined)
+               |          float* std::__fill_n_a<float*, unsigned long, float>(float*, unsigned long, float const&, std::random_access_iterator_tag) (inlined)
+               |          void std::__fill_a<float*, float>(float*, float*, float const&) (inlined)
+               |          void std::__fill_a1<float*, float>(float*, float*, float const&)
+               |          |          
+               |           --8.65%--0xffffffffbbe01280
+               |          
+               |--7.93%--std::vector<float, std::allocator<float> >::size() const
+               |          
+                --4.29%--std::vector<float, std::allocator<float> >::operator[](unsigned long) const
+
+    91.00%     0.00%  tree_benchmark_  libc.so.6             [.] __libc_start_call_main
+            |
+            ---__libc_start_call_main
+               main
+               |          
+               |--48.39%--count_less_than_threshold(std::vector<float, std::allocator<float> > const&, float)
+               |          |          
+               |          |--11.65%--std::vector<float, std::allocator<float> >::operator[](unsigned long) const
+               |          |          |          
+               |          |           --8.13%--std::vector<float, std::allocator<float> >::size() const
+               |          |          
+               |           --7.48%--std::vector<float, std::allocator<float> >::size() const
+               |          
+               |--30.39%--std::allocator<float>::~allocator() (inlined)
+               |          std::vector<float, std::allocator<float> >::vector(unsigned long, std::allocator<float> const&)
+               |          std::vector<float, std::allocator<float> >::_M_default_initialize(unsigned long)
+               |          float* std::__uninitialized_default_n_a<float*, unsigned long, float>(float*, unsigned long, std::allocator<float>&)
+               |          float* std::__uninitialized_default_n<float*, unsigned long>(float*, unsigned long)
+               |          float* std::__uninitialized_default_n_1<true>::__uninit_default_n<float*, unsigned long>(float*, unsigned long)
+               |          float* std::fill_n<float*, unsigned long, float>(float*, unsigned long, float const&) (inlined)
+               |          float* std::__fill_n_a<float*, unsigned long, float>(float*, unsigned long, float const&, std::random_access_iterator_tag) (inlined)
+               |          void std::__fill_a<float*, float>(float*, float*, float const&) (inlined)
+               |          void std::__fill_a1<float*, float>(float*, float*, float const&)
+               |          |          
+               |           --8.65%--0xffffffffbbe01280
+               |          
+               |--7.93%--std::vector<float, std::allocator<float> >::size() const
+               |          
+                --4.29%--std::vector<float, std::allocator<float> >::operator[](unsigned long) const
+
+    57.30%     0.00%  tree_benchmark_  tree_benchmark_O0     [.] float* std::__uninitialized_default_n_1<true>::__uninit_default_n<float*, unsigned long>(float*, unsigned long)
+            |
+            ---void std::__fill_a<float*, float>(float*, float*, float const&) (inlined)
+               |          
+               |--48.33%--0x401397
+               |          |          
+               |          |--39.36%--0x401397
+               |          |          |          
+               |          |          |--30.39%--0x401397
+               |          |          |          0x4017e2
+               |          |          |          |          
+               |          |          |           --8.65%--0xffffffffbbe01280
+               |          |          |          
+               |          |           --8.97%--0x4017e2
+               |          |                     |          
+               |          |                      --3.01%--0xffffffffbbe01280
+               |          |          
+               |           --8.97%--0x4017e2
+               |                     |          
+               |                      --3.01%--0xffffffffbbe01280
+               |          
+                --8.97%--void std::__fill_a1<float*, float>(float*, float*, float const&)
+                          |          
+                           --3.01%--0xffffffffbbe01280
+
+    49.55%    30.42%  tree_benchmark_  tree_benchmark_O0     [.] count_less_than_threshold(std::vector<float, std::allocator<float> > const&, float)
+            |          
+            |--30.42%--_start
+            |          __libc_start_main@@GLIBC_2.34
+            |          __libc_start_call_main
+            |          main
+            |          |          
+            |          |--29.26%--count_less_than_threshold(std::vector<float, std::allocator<float> > const&, float)
+            |          |          
+            |           --1.16%--std::vector<float, std::allocator<float> >::size() const
+            |          
+             --19.13%--count_less_than_threshold(std::vector<float, std::allocator<float> > const&, float)
+                       |          
+                       |--11.65%--std::vector<float, std::allocator<float> >::operator[](unsigned long) const
+                       |          |          
+                       |           --8.13%--std::vector<float, std::allocator<float> >::size() const
+                       |          
+                        --7.48%--std::vector<float, std::allocator<float> >::size() const
+
+    30.39%    30.39%  tree_benchmark_  tree_benchmark_O0     [.] void std::__fill_a1<float*, float>(float*, float*, float const&)
+            |
+            ---_start
+               __libc_start_main@@GLIBC_2.34
+               __libc_start_call_main
+               main
+               std::allocator<float>::~allocator() (inlined)
+               std::vector<float, std::allocator<float> >::vector(unsigned long, std::allocator<float> const&)
+               std::vector<float, std::allocator<float> >::_M_default_initialize(unsigned long)
+               float* std::__uninitialized_default_n_a<float*, unsigned long, float>(float*, unsigned long, std::allocator<float>&)
+               float* std::__uninitialized_default_n<float*, unsigned long>(float*, unsigned long)
+               float* std::__uninitialized_default_n_1<true>::__uninit_default_n<float*, unsigned long>(float*, unsigned long)
+               float* std::fill_n<float*, unsigned long, float>(float*, unsigned long, float const&) (inlined)
+               float* std::__fill_n_a<float*, unsigned long, float>(float*, unsigned long, float const&, std::random_access_iterator_tag) (inlined)
+               void std::__fill_a<float*, float>(float*, float*, float const&) (inlined)
+               void std::__fill_a1<float*, float>(float*, float*, float const&)
+               |          
+                --8.65%--0xffffffffbbe01280
+
+    30.39%     0.00%  tree_benchmark_  tree_benchmark_O0     [.] std::vector<float, std::allocator<float> >::vector(unsigned long, std::allocator<float> const&)
+            |
+            ---std::vector<float, std::allocator<float> >::vector(unsigned long, std::allocator<float> const&)
+               std::vector<float, std::allocator<float> >::_M_default_initialize(unsigned long)
+               float* std::__uninitialized_default_n_a<float*, unsigned long, float>(float*, unsigned long, std::allocator<float>&)
+               float* std::__uninitialized_default_n<float*, unsigned long>(float*, unsigned long)
+               float* std::__uninitialized_default_n_1<true>::__uninit_default_n<float*, unsigned long>(float*, unsigned long)
+               float* std::fill_n<float*, unsigned long, float>(float*, unsigned long, float const&) (inlined)
+               float* std::__fill_n_a<float*, unsigned long, float>(float*, unsigned long, float const&, std::random_access_iterator_tag) (inlined)
+               void std::__fill_a<float*, float>(float*, float*, float const&) (inlined)
+               void std::__fill_a1<float*, float>(float*, float*, float const&)
+               |          
+                --8.65%--0xffffffffbbe01280
+
+    30.39%     0.00%  tree_benchmark_  tree_benchmark_O0     [.] std::vector<float, std::allocator<float> >::_M_default_initialize(unsigned long)
+            |
+            ---std::vector<float, std::allocator<float> >::_M_default_initialize(unsigned long)
+               float* std::__uninitialized_default_n_a<float*, unsigned long, float>(float*, unsigned long, std::allocator<float>&)
+               float* std::__uninitialized_default_n<float*, unsigned long>(float*, unsigned long)
+               float* std::__uninitialized_default_n_1<true>::__uninit_default_n<float*, unsigned long>(float*, unsigned long)
+               float* std::fill_n<float*, unsigned long, float>(float*, unsigned long, float const&) (inlined)
+               float* std::__fill_n_a<float*, unsigned long, float>(float*, unsigned long, float const&, std::random_access_iterator_tag) (inlined)
+               void std::__fill_a<float*, float>(float*, float*, float const&) (inlined)
+               void std::__fill_a1<float*, float>(float*, float*, float const&)
+               |          
+                --8.65%--0xffffffffbbe01280
+
+    30.39%     0.00%  tree_benchmark_  tree_benchmark_O0     [.] float* std::__uninitialized_default_n_a<float*, unsigned long, float>(float*, unsigned long, std::allocator<float>&)
+            |
+            ---float* std::__uninitialized_default_n_a<float*, unsigned long, float>(float*, unsigned long, std::allocator<float>&)
+               float* std::__uninitialized_default_n<float*, unsigned long>(float*, unsigned long)
+               float* std::__uninitialized_default_n_1<true>::__uninit_default_n<float*, unsigned long>(float*, unsigned long)
+               float* std::fill_n<float*, unsigned long, float>(float*, unsigned long, float const&) (inlined)
+               float* std::__fill_n_a<float*, unsigned long, float>(float*, unsigned long, float const&, std::random_access_iterator_tag) (inlined)
+               void std::__fill_a<float*, float>(float*, float*, float const&) (inlined)
+               void std::__fill_a1<float*, float>(float*, float*, float const&)
+               |          
+                --8.65%--0xffffffffbbe01280
+
+    30.39%     0.00%  tree_benchmark_  tree_benchmark_O0     [.] float* std::__uninitialized_default_n<float*, unsigned long>(float*, unsigned long)
+            |
+            ---float* std::__uninitialized_default_n<float*, unsigned long>(float*, unsigned long)
+               float* std::__uninitialized_default_n_1<true>::__uninit_default_n<float*, unsigned long>(float*, unsigned long)
+               float* std::fill_n<float*, unsigned long, float>(float*, unsigned long, float const&) (inlined)
+               float* std::__fill_n_a<float*, unsigned long, float>(float*, unsigned long, float const&, std::random_access_iterator_tag) (inlined)
+               void std::__fill_a<float*, float>(float*, float*, float const&) (inlined)
+               void std::__fill_a1<float*, float>(float*, float*, float const&)
+               |          
+                --8.65%--0xffffffffbbe01280
+
+    24.11%     1.71%  tree_benchmark_  ld-linux-x86-64.so.2  [.] _dl_relocate_object_no_relro
+            |          
+            |--10.45%--0x7fa96693b258
+            |          |          
+            |          |--7.40%--0x7fa96693b258
+            |          |          |          
+            |          |          |--4.35%--0x7fa96693b258
+            |          |          |          |          
+            |          |          |          |--2.03%--0x7fa966936ad6
+            |          |          |          |          |          
+            |          |          |          |          |--1.42%--0x7fa9669361c0
+            |          |          |          |          |          
+            |          |          |          |           --0.61%--0x7fa966935d44
+            |          |          |          |          
+            |          |          |           --1.30%--0x7fa96693b258
+            |          |          |                     0x7fa966936ad6
+            |          |          |                     |          
+            |          |          |                     |--0.69%--0x7fa9669361c0
+            |          |          |                     |          
+            |          |          |                      --0.61%--0x7fa966935d44
+            |          |          |          
+            |          |           --2.03%--0x7fa966936ad6
+            |          |                     |          
+            |          |                     |--1.42%--0x7fa9669361c0
+            |          |                     |          
+            |          |                      --0.61%--0x7fa966935d44
+            |          |          
+            |           --2.03%--0x7fa966936ad6
+            |                     |          
+            |                     |--1.42%--0x7fa9669361c0
+            |                     |          
+            |                      --0.61%--0x7fa966935d44
+            |          
+            |--7.81%--0x7fcc7b125258
+            |          |          
+            |          |--6.39%--0x7fcc7b125258
+            |          |          |          
+            |          |          |--4.96%--0x7fcc7b125258
+            |          |          |          |          
+            |          |          |          |--3.54%--0x7fcc7b125258
+            |          |          |          |          0x7fcc7b120ad6
+            |          |          |          |          |          
+            |          |          |          |          |--2.85%--0x7fcc7b11fed4
+            |          |          |          |          |          
+            |          |          |          |           --0.69%--0x7fb7576e8a10
+            |          |          |          |          
+            |          |          |           --1.42%--0x7fcc7b120ad6
+            |          |          |                     0x7fcc7b11feae
+            |          |          |          
+            |          |           --1.42%--0x7fcc7b120ad6
+            |          |                     0x7fcc7b11feae
+            |          |          
+            |           --1.42%--0x7fcc7b120ad6
+            |                     0x7fcc7b11feae
+            |          
+            |--4.15%--resolve_map (inlined)
+            |          |          
+            |          |--2.07%--0x7f644fb2c258
+            |          |          |          
+            |          |          |--1.38%--0x7f644fb27ad6
+            |          |          |          |          
+            |          |          |          |--0.69%--0x7fb7576e8a10
+            |          |          |          |          
+            |          |          |           --0.69%--0x7f644fb26ec9
+            |          |          |          
+            |          |           --0.69%--0x7f644fb2c258
+            |          |                     0x7f644fb27ad6
+            |          |                     0x7f644fb26ec9
+            |          |          
+            |           --1.38%--_dl_lookup_symbol_x
+            |                     |          
+            |                     |--0.69%--do_lookup_x
+            |                     |          
+            |                      --0.69%--_dl_new_hash (inlined)
+            |          
+            |--1.02%--0x7fa96694a6c8
+            |          0x7fa96694b841
+            |          0x7fa96694b841
+            |          0x7fa96694a156
+            |          0x7fa96694d79a
+            |          0x7fa96693d101
+            |          0x7fa96693b251
+            |          0x7fa96693b251
+            |          0x7fa96693b251
+            |          0x7fa96693b251
+            |          
+             --0.69%--0x7fb7576fc6c8
+                       0x7fb7576fd841
+                       0x7fb7576fd841
+                       0x7fb7576fc156
+                       0x7fb7576ff79a
+                       0x7fb7576ef101
+                       0x7fb7576ed140
+                       0x7fb7576ed140
+
+    23.53%    22.37%  tree_benchmark_  tree_benchmark_O0     [.] std::vector<float, std::allocator<float> >::size() const
+            |          
+            |--22.37%--_start
+            |          __libc_start_main@@GLIBC_2.34
+            |          __libc_start_call_main
+            |          main
+            |          |          
+            |          |--15.61%--count_less_than_threshold(std::vector<float, std::allocator<float> > const&, float)
+            |          |          |          
+            |          |          |--8.13%--std::vector<float, std::allocator<float> >::operator[](unsigned long) const
+            |          |          |          std::vector<float, std::allocator<float> >::size() const
+            |          |          |          
+            |          |           --7.48%--std::vector<float, std::allocator<float> >::size() const
+            |          |          
+            |           --6.77%--std::vector<float, std::allocator<float> >::size() const
+            |          
+             --1.16%--std::vector<float, std::allocator<float> >::size() const
+
+    21.42%     0.00%  tree_benchmark_  tree_benchmark_O0     [.] std::allocator<float>::~allocator() (inlined)
+            |
+            ---std::allocator<float>::~allocator() (inlined)
+               std::vector<float, std::allocator<float> >::vector(unsigned long, std::allocator<float> const&)
+               std::vector<float, std::allocator<float> >::_M_default_initialize(unsigned long)
+               float* std::__uninitialized_default_n_a<float*, unsigned long, float>(float*, unsigned long, std::allocator<float>&)
+               float* std::__uninitialized_default_n<float*, unsigned long>(float*, unsigned long)
+               float* std::__uninitialized_default_n_1<true>::__uninit_default_n<float*, unsigned long>(float*, unsigned long)
+               float* std::fill_n<float*, unsigned long, float>(float*, unsigned long, float const&) (inlined)
+               float* std::__fill_n_a<float*, unsigned long, float>(float*, unsigned long, float const&, std::random_access_iterator_tag) (inlined)
+               void std::__fill_a<float*, float>(float*, float*, float const&) (inlined)
+               void std::__fill_a1<float*, float>(float*, float*, float const&)
+               |          
+                --5.64%--0xffffffffbbe01280
+
+    21.42%     0.00%  tree_benchmark_  tree_benchmark_O0     [.] float* std::fill_n<float*, unsigned long, float>(float*, unsigned long, float const&) (inlined)
+            |
+            ---float* std::fill_n<float*, unsigned long, float>(float*, unsigned long, float const&) (inlined)
+               float* std::__fill_n_a<float*, unsigned long, float>(float*, unsigned long, float const&, std::random_access_iterator_tag) (inlined)
+               void std::__fill_a<float*, float>(float*, float*, float const&) (inlined)
+               void std::__fill_a1<float*, float>(float*, float*, float const&)
+               |          
+                --5.64%--0xffffffffbbe01280
+
+    21.42%     0.00%  tree_benchmark_  tree_benchmark_O0     [.] float* std::__fill_n_a<float*, unsigned long, float>(float*, unsigned long, float const&, std::random_access_iterator_tag) (inlined)
+            |
+            ---float* std::__fill_n_a<float*, unsigned long, float>(float*, unsigned long, float const&, std::random_access_iterator_tag) (inlined)
+               void std::__fill_a<float*, float>(float*, float*, float const&) (inlined)
+               void std::__fill_a1<float*, float>(float*, float*, float const&)
+               |          
+                --5.64%--0xffffffffbbe01280
+
+    21.42%     0.00%  tree_benchmark_  tree_benchmark_O0     [.] void std::__fill_a<float*, float>(float*, float*, float const&) (inlined)
+            |
+            ---void std::__fill_a<float*, float>(float*, float*, float const&) (inlined)
+               void std::__fill_a1<float*, float>(float*, float*, float const&)
+               |          
+                --5.64%--0xffffffffbbe01280
+
+    15.94%     7.81%  tree_benchmark_  tree_benchmark_O0     [.] std::vector<float, std::allocator<float> >::operator[](unsigned long) const
+            |          
+            |--8.13%--std::vector<float, std::allocator<float> >::operator[](unsigned long) const
+            |          std::vector<float, std::allocator<float> >::size() const
+            |          
+             --7.81%--_start
+                       __libc_start_main@@GLIBC_2.34
+                       __libc_start_call_main
+                       main
+                       |          
+                       |--4.29%--std::vector<float, std::allocator<float> >::operator[](unsigned long) const
+                       |          
+                        --3.52%--count_less_than_threshold(std::vector<float, std::allocator<float> > const&, float)
+                                  std::vector<float, std::allocator<float> >::operator[](unsigned long) const
+
+    12.40%     0.00%  tree_benchmark_  ld-linux-x86-64.so.2  [.] _dl_start
+            |          
+            |--9.59%--0x7fa96694b841
+            |          |          
+            |          |--6.55%--0x7fa96694b841
+            |          |          0x7fa96694a156
+            |          |          0x7fa96694d79a
+            |          |          0x7fa96693d101
+            |          |          0x7fa96693b258
+            |          |          0x7fa96693b258
+            |          |          |          
+            |          |           --5.85%--0x7fa96693b258
+            |          |                     0x7fa96693b258
+            |          |                     |          
+            |          |                      --4.84%--0x7fa966936ad6
+            |          |                                |          
+            |          |                                |--3.54%--0x7fa9669361c0
+            |          |                                |          
+            |          |                                |--0.69%--0x7fb7576e8a10
+            |          |                                |          
+            |          |                                 --0.61%--0x7fa966935d44
+            |          |          
+            |           --3.05%--0x7fa96694a156
+            |                     0x7fa96694d79a
+            |                     0x7fa96693d101
+            |                     0x7fa96693b258
+            |                     0x7fa96693b258
+            |                     0x7fa96693b258
+            |                     0x7fa96693b258
+            |                     |          
+            |                      --2.03%--0x7fa966936ad6
+            |                                |          
+            |                                |--1.42%--0x7fa9669361c0
+            |                                |          
+            |                                 --0.61%--0x7fa966935d44
+            |          
+            |--1.42%--0x7fcc7b135841
+            |          0x7fcc7b134156
+            |          0x7fcc7b13779a
+            |          0x7fcc7b127101
+            |          0x7fcc7b125258
+            |          0x7fcc7b125258
+            |          0x7fcc7b125258
+            |          0x7fcc7b125258
+            |          0x7fcc7b120ad6
+            |          0x7fcc7b11feae
+            |          
+             --1.38%--_dl_start_final (inlined)
+                       _dl_sysdep_start
+                       dl_main
+                       _dl_relocate_object
+                       _dl_relocate_object_no_relro
+                       elf_dynamic_do_Rela (inlined)
+                       |          
+                        --0.69%--elf_machine_rela (inlined)
+                                  resolve_map (inlined)
+                                  _dl_lookup_symbol_x
+                                  do_lookup_x
+
+     8.65%     0.00%  tree_benchmark_  [unknown]             [.] 0xffffffffbbe01280
+            |
+            ---0xffffffffbbe01280
+
+     7.69%     0.00%  tree_benchmark_  ld-linux-x86-64.so.2  [.] _dl_start_user
+            |          
+            |--5.37%--0x7fcc7b1346c8
+            |          |          
+            |          |--4.23%--0x7fcc7b135841
+            |          |          0x7fcc7b135841
+            |          |          0x7fcc7b134156
+            |          |          0x7fcc7b13779a
+            |          |          0x7fcc7b127101
+            |          |          0x7fcc7b125258
+            |          |          0x7fcc7b125258
+            |          |          |          
+            |          |           --3.54%--0x7fcc7b125258
+            |          |                     0x7fcc7b125258
+            |          |                     0x7fcc7b120ad6
+            |          |                     |          
+            |          |                     |--2.85%--0x7fcc7b11fed4
+            |          |                     |          
+            |          |                      --0.69%--0x7fb7576e8a10
+            |          |          
+            |           --1.14%--0x7fb7576e34cd
+            |                     0x7fb7571c4284
+            |          
+             --2.32%--_dl_start_user
+                       _dl_start
+                       _dl_start_final (inlined)
+                       _dl_sysdep_start
+                       dl_main
+                       _dl_relocate_object
+                       _dl_relocate_object_no_relro
+                       elf_dynamic_do_Rela (inlined)
+                       elf_machine_rela (inlined)
+                       resolve_map (inlined)
+                       |          
+                        --1.30%--_dl_lookup_symbol_x
+                                  |          
+                                  |--0.69%--do_lookup_x
+                                  |          
+                                   --0.61%--check_match
+
+     6.55%     0.00%  tree_benchmark_  ld-linux-x86-64.so.2  [.] _dl_sysdep_start
+            |          
+            |--4.23%--0x7fcc7b134156
+            |          0x7fcc7b13779a
+            |          0x7fcc7b127101
+            |          0x7fcc7b125258
+            |          0x7fcc7b125258
+            |          |          
+            |           --3.54%--0x7fcc7b125258
+            |                     0x7fcc7b125258
+            |                     0x7fcc7b120ad6
+            |                     |          
+            |                     |--2.85%--0x7fcc7b11fed4
+            |                     |          
+            |                      --0.69%--0x7fb7576e8a10
+            |          
+             --2.32%--_dl_sysdep_start
+                       dl_main
+                       _dl_relocate_object
+                       _dl_relocate_object_no_relro
+                       elf_dynamic_do_Rela (inlined)
+                       elf_machine_rela (inlined)
+                       resolve_map (inlined)
+                       |          
+                        --1.30%--_dl_lookup_symbol_x
+                                  |          
+                                  |--0.69%--do_lookup_x
+                                  |          
+                                   --0.61%--check_match
+
+     6.55%     0.00%  tree_benchmark_  ld-linux-x86-64.so.2  [.] dl_main
+            |          
+            |--4.23%--0x7fcc7b13779a
+            |          0x7fcc7b127101
+            |          0x7fcc7b125258
+            |          0x7fcc7b125258
+            |          |          
+            |           --3.54%--0x7fcc7b125258
+            |                     0x7fcc7b125258
+            |                     0x7fcc7b120ad6
+            |                     |          
+            |                     |--2.85%--0x7fcc7b11fed4
+            |                     |          
+            |                      --0.69%--0x7fb7576e8a10
+            |          
+             --2.32%--dl_main
+                       _dl_relocate_object
+                       _dl_relocate_object_no_relro
+                       elf_dynamic_do_Rela (inlined)
+                       elf_machine_rela (inlined)
+                       resolve_map (inlined)
+                       |          
+                        --1.30%--_dl_lookup_symbol_x
+                                  |          
+                                  |--0.69%--do_lookup_x
+                                  |          
+                                   --0.61%--check_match
+
+     6.55%     0.00%  tree_benchmark_  ld-linux-x86-64.so.2  [.] _dl_relocate_object
+            |
+            ---_dl_relocate_object
+               _dl_relocate_object_no_relro
+               elf_dynamic_do_Rela (inlined)
+               |          
+                --5.85%--elf_machine_rela (inlined)
+                          resolve_map (inlined)
+                          |          
+                           --4.84%--_dl_lookup_symbol_x
+                                     |          
+                                     |--3.54%--do_lookup_x
+                                     |          
+                                     |--0.69%--_dl_new_hash (inlined)
+                                     |          
+                                      --0.61%--check_match
+
+     4.84%     0.69%  tree_benchmark_  ld-linux-x86-64.so.2  [.] _dl_lookup_symbol_x
+            |          
+            |--2.85%--_dl_lookup_symbol_x
+            |          do_lookup_x
+            |          
+            |--1.30%--0x7fa966936ad6
+            |          |          
+            |          |--0.69%--0x7fa9669361c0
+            |          |          
+            |           --0.61%--0x7fa966935d44
+            |          
+             --0.69%--_dl_start_user
+                       _dl_start
+                       _dl_start_final (inlined)
+                       _dl_sysdep_start
+                       dl_main
+                       _dl_relocate_object
+                       _dl_relocate_object_no_relro
+                       elf_dynamic_do_Rela (inlined)
+                       elf_machine_rela (inlined)
+                       resolve_map (inlined)
+                       _dl_lookup_symbol_x
+                       _dl_new_hash (inlined)
+
+     3.54%     3.54%  tree_benchmark_  ld-linux-x86-64.so.2  [.] do_lookup_x
+            |
+            ---_dl_start_user
+               _dl_start
+               _dl_start_final (inlined)
+               _dl_sysdep_start
+               dl_main
+               _dl_relocate_object
+               _dl_relocate_object_no_relro
+               elf_dynamic_do_Rela (inlined)
+               elf_machine_rela (inlined)
+               resolve_map (inlined)
+               _dl_lookup_symbol_x
+               do_lookup_x
+
+     1.14%     1.14%  tree_benchmark_  libc.so.6             [.] __init_misc
+            |
+            ---_dl_start_user
+               _dl_init
+               __init_misc
+
+     1.14%     0.00%  tree_benchmark_  ld-linux-x86-64.so.2  [.] _dl_init
+            |
+            ---_dl_init
+               __init_misc
+
+     0.69%     0.69%  bash             ld-linux-x86-64.so.2  [.] _dl_lookup_symbol_x
+            |
+            ---_dl_start_user
+               _dl_start
+               _dl_start_final (inlined)
+               _dl_sysdep_start
+               dl_main
+               _dl_relocate_object
+               _dl_relocate_object_no_relro
+               elf_dynamic_do_Rela (inlined)
+               elf_machine_rela (inlined)
+               resolve_map (inlined)
+               _dl_lookup_symbol_x
+               _dl_new_hash (inlined)
+
+     0.69%     0.00%  bash             ld-linux-x86-64.so.2  [.] _dl_start_user
+            |
+            ---_dl_start_user
+               _dl_start
+               _dl_start_final (inlined)
+               _dl_sysdep_start
+               dl_main
+               _dl_relocate_object
+               _dl_relocate_object_no_relro
+               elf_dynamic_do_Rela (inlined)
+               elf_machine_rela (inlined)
+               resolve_map (inlined)
+               _dl_lookup_symbol_x
+               _dl_new_hash (inlined)
+
+     0.69%     0.00%  bash             ld-linux-x86-64.so.2  [.] _dl_start
+            |
+            ---_dl_start
+               _dl_start_final (inlined)
+               _dl_sysdep_start
+               dl_main
+               _dl_relocate_object
+               _dl_relocate_object_no_relro
+               elf_dynamic_do_Rela (inlined)
+               elf_machine_rela (inlined)
+               resolve_map (inlined)
+               _dl_lookup_symbol_x
+               _dl_new_hash (inlined)
+
+     0.69%     0.00%  bash             ld-linux-x86-64.so.2  [.] _dl_start_final (inlined)
+            |
+            ---_dl_start_final (inlined)
+               _dl_sysdep_start
+               dl_main
+               _dl_relocate_object
+               _dl_relocate_object_no_relro
+               elf_dynamic_do_Rela (inlined)
+               elf_machine_rela (inlined)
+               resolve_map (inlined)
+               _dl_lookup_symbol_x
+               _dl_new_hash (inlined)
+
+     0.69%     0.00%  bash             ld-linux-x86-64.so.2  [.] _dl_sysdep_start
+            |
+            ---_dl_sysdep_start
+               dl_main
+               _dl_relocate_object
+               _dl_relocate_object_no_relro
+               elf_dynamic_do_Rela (inlined)
+               elf_machine_rela (inlined)
+               resolve_map (inlined)
+               _dl_lookup_symbol_x
+               _dl_new_hash (inlined)
+
+     0.69%     0.00%  bash             ld-linux-x86-64.so.2  [.] dl_main
+            |
+            ---dl_main
+               _dl_relocate_object
+               _dl_relocate_object_no_relro
+               elf_dynamic_do_Rela (inlined)
+               elf_machine_rela (inlined)
+               resolve_map (inlined)
+               _dl_lookup_symbol_x
+               _dl_new_hash (inlined)
+
+     0.69%     0.00%  bash             ld-linux-x86-64.so.2  [.] _dl_relocate_object
+            |
+            ---_dl_relocate_object
+               _dl_relocate_object_no_relro
+               elf_dynamic_do_Rela (inlined)
+               elf_machine_rela (inlined)
+               resolve_map (inlined)
+               _dl_lookup_symbol_x
+               _dl_new_hash (inlined)
+
+     0.69%     0.00%  bash             ld-linux-x86-64.so.2  [.] _dl_relocate_object_no_relro
+            |
+            ---_dl_relocate_object_no_relro
+               elf_dynamic_do_Rela (inlined)
+               elf_machine_rela (inlined)
+               resolve_map (inlined)
+               _dl_lookup_symbol_x
+               _dl_new_hash (inlined)
+
+     0.69%     0.00%  bash             ld-linux-x86-64.so.2  [.] elf_dynamic_do_Rela (inlined)
+            |
+            ---elf_dynamic_do_Rela (inlined)
+               elf_machine_rela (inlined)
+               resolve_map (inlined)
+               _dl_lookup_symbol_x
+               _dl_new_hash (inlined)
+
+     0.69%     0.00%  bash             ld-linux-x86-64.so.2  [.] elf_machine_rela (inlined)
+            |
+            ---elf_machine_rela (inlined)
+               resolve_map (inlined)
+               _dl_lookup_symbol_x
+               _dl_new_hash (inlined)
+
+     0.69%     0.00%  bash             ld-linux-x86-64.so.2  [.] resolve_map (inlined)
+            |
+            ---resolve_map (inlined)
+               _dl_lookup_symbol_x
+               _dl_new_hash (inlined)
+
+     0.69%     0.00%  bash             ld-linux-x86-64.so.2  [.] _dl_new_hash (inlined)
+            |
+            ---_dl_new_hash (inlined)
+
+     0.69%     0.00%  tree_benchmark_  ld-linux-x86-64.so.2  [.] _dl_start_final (inlined)
+            |
+            ---_dl_start_final (inlined)
+               _dl_sysdep_start
+               dl_main
+               _dl_relocate_object
+               _dl_relocate_object_no_relro
+               elf_dynamic_do_Rela (inlined)
+               elf_machine_rela (inlined)
+               resolve_map (inlined)
+               _dl_lookup_symbol_x
+               _dl_new_hash (inlined)
+
+     0.69%     0.00%  tree_benchmark_  ld-linux-x86-64.so.2  [.] elf_dynamic_do_Rela (inlined)
+            |
+            ---elf_dynamic_do_Rela (inlined)
+               elf_machine_rela (inlined)
+               resolve_map (inlined)
+               _dl_lookup_symbol_x
+               _dl_new_hash (inlined)
+
+     0.69%     0.00%  tree_benchmark_  ld-linux-x86-64.so.2  [.] _dl_new_hash (inlined)
+            |
+            ---_dl_new_hash (inlined)
+
+     0.63%     0.63%  bash             libc.so.6             [.] __strcmp_avx2
+            |
+            ---_start
+               __libc_start_main@@GLIBC_2.34
+               __libc_start_call_main
+               main
+               set_default_lang
+               get_string_value (inlined)
+               set_locale_var
+               reset_locale_vars
+               maybe_make_export_env.part.0
+               make_var_export_array (inlined)
+               map_over
+               __strcmp_avx2
+
+     0.63%     0.00%  bash             bash                  [.] _start
+            |
+            ---_start
+               __libc_start_main@@GLIBC_2.34
+               __libc_start_call_main
+               main
+               set_default_lang
+               get_string_value (inlined)
+               set_locale_var
+               reset_locale_vars
+               maybe_make_export_env.part.0
+               make_var_export_array (inlined)
+               map_over
+               __strcmp_avx2
+
+     0.63%     0.00%  bash             libc.so.6             [.] __libc_start_main@@GLIBC_2.34
+            |
+            ---__libc_start_main@@GLIBC_2.34
+               __libc_start_call_main
+               main
+               set_default_lang
+               get_string_value (inlined)
+               set_locale_var
+               reset_locale_vars
+               maybe_make_export_env.part.0
+               make_var_export_array (inlined)
+               map_over
+               __strcmp_avx2
+
+     0.63%     0.00%  bash             libc.so.6             [.] __libc_start_call_main
+            |
+            ---__libc_start_call_main
+               main
+               set_default_lang
+               get_string_value (inlined)
+               set_locale_var
+               reset_locale_vars
+               maybe_make_export_env.part.0
+               make_var_export_array (inlined)
+               map_over
+               __strcmp_avx2
+
+     0.63%     0.00%  bash             bash                  [.] main
+            |
+            ---main
+               set_default_lang
+               get_string_value (inlined)
+               set_locale_var
+               reset_locale_vars
+               maybe_make_export_env.part.0
+               make_var_export_array (inlined)
+               map_over
+               __strcmp_avx2
+
+     0.63%     0.00%  bash             bash                  [.] set_default_lang
+            |
+            ---set_default_lang
+               get_string_value (inlined)
+               set_locale_var
+               reset_locale_vars
+               maybe_make_export_env.part.0
+               make_var_export_array (inlined)
+               map_over
+               __strcmp_avx2
+
+     0.63%     0.00%  bash             bash                  [.] get_string_value (inlined)
+            |
+            ---get_string_value (inlined)
+               set_locale_var
+               reset_locale_vars
+               maybe_make_export_env.part.0
+               make_var_export_array (inlined)
+               map_over
+               __strcmp_avx2
+
+     0.63%     0.00%  bash             bash                  [.] set_locale_var
+            |
+            ---set_locale_var
+               reset_locale_vars
+               maybe_make_export_env.part.0
+               make_var_export_array (inlined)
+               map_over
+               __strcmp_avx2
+
+     0.63%     0.00%  bash             bash                  [.] reset_locale_vars
+            |
+            ---reset_locale_vars
+               maybe_make_export_env.part.0
+               make_var_export_array (inlined)
+               map_over
+               __strcmp_avx2
+
+     0.63%     0.00%  bash             bash                  [.] maybe_make_export_env.part.0
+            |
+            ---maybe_make_export_env.part.0
+               make_var_export_array (inlined)
+               map_over
+               __strcmp_avx2
+
+     0.63%     0.00%  bash             bash                  [.] make_var_export_array (inlined)
+            |
+            ---make_var_export_array (inlined)
+               map_over
+               __strcmp_avx2
+
+     0.63%     0.00%  bash             bash                  [.] map_over
+            |
+            ---map_over
+               __strcmp_avx2
+
+     0.61%     0.61%  tree_benchmark_  ld-linux-x86-64.so.2  [.] check_match
+            |
+            ---_dl_start_user
+               _dl_start
+               _dl_start_final (inlined)
+               _dl_sysdep_start
+               dl_main
+               _dl_relocate_object
+               _dl_relocate_object_no_relro
+               elf_dynamic_do_Rela (inlined)
+               elf_machine_rela (inlined)
+               resolve_map (inlined)
+               _dl_lookup_symbol_x
+               check_match
+
+
+
+# Samples: 18K of event 'cpu_core/cycles/Pu'
+# Event count (approx.): 78063869204
+#
+# Children      Self  Command          Shared Object         Symbol                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+# ........  ........  ...............  ....................  ...............................................................................................................................................................................................................................................................................................................................................................................................................................................................
+#
+   100.77%     0.94%  tree_benchmark_  tree_benchmark_O0     [.] main
+            |          
+            |--99.29%--std::allocator<float>::~allocator() (inlined)
+            |          |          
+            |          |--77.96%--0x40055c
+            |          |          |          
+            |          |          |--24.54%--0x40091e
+            |          |          |          |          
+            |          |          |           --8.59%--0x4008a2
+            |          |          |          
+            |          |           --20.66%--0x400896
+            |          |          
+            |          |--9.81%--0x400ab9
+            |          |          |          
+            |          |           --8.71%--0x400e54
+            |          |                     |          
+            |          |                      --7.12%--0x4010c5
+            |          |                                |          
+            |          |                                 --6.72%--0x40126f
+            |          |                                           |          
+            |          |                                            --5.89%--0x401415
+            |          |                                                      |          
+            |          |                                                       --3.90%--0x401597
+            |          |                                                                 |          
+            |          |                                                                  --2.83%--0x401683
+            |          |          
+            |          |--6.25%--0x4008c6
+            |          |          
+            |           --4.20%--0x400896
+            |          
+             --0.94%--0x400465
+                       0x7fa96631f798
+                       0x7fa96631f681
+                       |          
+                        --0.80%--0x40067b
+
+   100.00%     0.00%  tree_benchmark_  tree_benchmark_O0     [.] _start
+            |
+            ---_start
+               __libc_start_main@@GLIBC_2.34
+               __libc_start_call_main
+               |          
+                --99.86%--main
+                          |          
+                          |--77.96%--count_less_than_threshold(std::vector<float, std::allocator<float> > const&, float)
+                          |          |          
+                          |          |--24.54%--std::vector<float, std::allocator<float> >::operator[](unsigned long) const
+                          |          |          |          
+                          |          |           --8.59%--std::vector<float, std::allocator<float> >::size() const
+                          |          |          
+                          |           --20.66%--std::vector<float, std::allocator<float> >::size() const
+                          |          
+                          |--9.81%--float std::uniform_real_distribution<float>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+                          |          |          
+                          |           --8.71%--float std::uniform_real_distribution<float>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_real_distribution<float>::param_type const&)
+                          |                     |          
+                          |                      --7.12%--std::__detail::_Adaptor<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>, float>::operator()()
+                          |                                |          
+                          |                                 --6.72%--float std::_V2::generate_canonical<float, 24ul, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+                          |                                           |          
+                          |                                            --5.89%--float std::__generate_canonical_pow2<float, 24ul, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+                          |                                                      |          
+                          |                                                       --3.90%--std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()()
+                          |                                                                 |          
+                          |                                                                  --2.83%--std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand()
+                          |          
+                          |--6.25%--std::vector<float, std::allocator<float> >::operator[](unsigned long) const
+                          |          
+                           --4.20%--std::vector<float, std::allocator<float> >::size() const
+
+   100.00%     0.00%  tree_benchmark_  libc.so.6             [.] __libc_start_main@@GLIBC_2.34
+            |
+            ---__libc_start_main@@GLIBC_2.34
+               __libc_start_call_main
+               |          
+                --99.86%--main
+                          |          
+                          |--77.96%--count_less_than_threshold(std::vector<float, std::allocator<float> > const&, float)
+                          |          |          
+                          |          |--24.54%--std::vector<float, std::allocator<float> >::operator[](unsigned long) const
+                          |          |          |          
+                          |          |           --8.59%--std::vector<float, std::allocator<float> >::size() const
+                          |          |          
+                          |           --20.66%--std::vector<float, std::allocator<float> >::size() const
+                          |          
+                          |--9.81%--float std::uniform_real_distribution<float>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+                          |          |          
+                          |           --8.71%--float std::uniform_real_distribution<float>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_real_distribution<float>::param_type const&)
+                          |                     |          
+                          |                      --7.12%--std::__detail::_Adaptor<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>, float>::operator()()
+                          |                                |          
+                          |                                 --6.72%--float std::_V2::generate_canonical<float, 24ul, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+                          |                                           |          
+                          |                                            --5.89%--float std::__generate_canonical_pow2<float, 24ul, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+                          |                                                      |          
+                          |                                                       --3.90%--std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()()
+                          |                                                                 |          
+                          |                                                                  --2.83%--std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand()
+                          |          
+                          |--6.25%--std::vector<float, std::allocator<float> >::operator[](unsigned long) const
+                          |          
+                           --4.20%--std::vector<float, std::allocator<float> >::size() const
+
+   100.00%     0.00%  tree_benchmark_  libc.so.6             [.] __libc_start_call_main
+            |
+            ---__libc_start_call_main
+               |          
+                --99.86%--main
+                          |          
+                          |--77.96%--count_less_than_threshold(std::vector<float, std::allocator<float> > const&, float)
+                          |          |          
+                          |          |--24.54%--std::vector<float, std::allocator<float> >::operator[](unsigned long) const
+                          |          |          |          
+                          |          |           --8.59%--std::vector<float, std::allocator<float> >::size() const
+                          |          |          
+                          |           --20.66%--std::vector<float, std::allocator<float> >::size() const
+                          |          
+                          |--9.81%--float std::uniform_real_distribution<float>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+                          |          |          
+                          |           --8.71%--float std::uniform_real_distribution<float>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_real_distribution<float>::param_type const&)
+                          |                     |          
+                          |                      --7.12%--std::__detail::_Adaptor<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>, float>::operator()()
+                          |                                |          
+                          |                                 --6.72%--float std::_V2::generate_canonical<float, 24ul, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+                          |                                           |          
+                          |                                            --5.89%--float std::__generate_canonical_pow2<float, 24ul, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+                          |                                                      |          
+                          |                                                       --3.90%--std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()()
+                          |                                                                 |          
+                          |                                                                  --2.83%--std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand()
+                          |          
+                          |--6.25%--std::vector<float, std::allocator<float> >::operator[](unsigned long) const
+                          |          
+                           --4.20%--std::vector<float, std::allocator<float> >::size() const
+
+    84.13%    33.34%  tree_benchmark_  tree_benchmark_O0     [.] count_less_than_threshold(std::vector<float, std::allocator<float> > const&, float)
+            |          
+            |--50.79%--count_less_than_threshold(std::vector<float, std::allocator<float> > const&, float)
+            |          |          
+            |          |--24.54%--std::vector<float, std::allocator<float> >::operator[](unsigned long) const
+            |          |          |          
+            |          |           --8.59%--std::vector<float, std::allocator<float> >::size() const
+            |          |          
+            |           --20.66%--std::vector<float, std::allocator<float> >::size() const
+            |          
+             --33.34%--_start
+                       __libc_start_main@@GLIBC_2.34
+                       __libc_start_call_main
+                       main
+                       |          
+                       |--27.16%--count_less_than_threshold(std::vector<float, std::allocator<float> > const&, float)
+                       |          
+                       |--3.56%--std::vector<float, std::allocator<float> >::size() const
+                       |          
+                        --2.62%--std::vector<float, std::allocator<float> >::operator[](unsigned long) const
+
+    39.30%    25.32%  tree_benchmark_  tree_benchmark_O0     [.] std::vector<float, std::allocator<float> >::operator[](unsigned long) const
+            |          
+            |--25.32%--_start
+            |          __libc_start_main@@GLIBC_2.34
+            |          __libc_start_call_main
+            |          main
+            |          |          
+            |          |--21.69%--count_less_than_threshold(std::vector<float, std::allocator<float> > const&, float)
+            |          |          |          
+            |          |          |--13.18%--std::vector<float, std::allocator<float> >::operator[](unsigned long) const
+            |          |          |          
+            |          |           --5.88%--std::vector<float, std::allocator<float> >::size() const
+            |          |          
+            |           --3.63%--std::vector<float, std::allocator<float> >::operator[](unsigned long) const
+            |          
+             --13.98%--std::vector<float, std::allocator<float> >::operator[](unsigned long) const
+                       |          
+                        --8.59%--std::vector<float, std::allocator<float> >::size() const
+
+    39.18%    29.74%  tree_benchmark_  tree_benchmark_O0     [.] std::vector<float, std::allocator<float> >::size() const
+            |          
+            |--29.74%--_start
+            |          __libc_start_main@@GLIBC_2.34
+            |          __libc_start_call_main
+            |          main
+            |          |          
+            |          |--29.10%--count_less_than_threshold(std::vector<float, std::allocator<float> > const&, float)
+            |          |          |          
+            |          |          |--14.78%--std::vector<float, std::allocator<float> >::size() const
+            |          |          |          
+            |          |           --11.36%--std::vector<float, std::allocator<float> >::operator[](unsigned long) const
+            |          |                     |          
+            |          |                      --8.59%--std::vector<float, std::allocator<float> >::size() const
+            |          |          
+            |           --0.64%--std::vector<float, std::allocator<float> >::size() const
+            |          
+             --9.44%--std::vector<float, std::allocator<float> >::size() const
+
+    10.25%     0.50%  tree_benchmark_  tree_benchmark_O0     [.] float std::uniform_real_distribution<float>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+            |          
+            |--9.75%--float std::uniform_real_distribution<float>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+            |          |          
+            |           --8.71%--float std::uniform_real_distribution<float>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_real_distribution<float>::param_type const&)
+            |                     |          
+            |                      --7.12%--std::__detail::_Adaptor<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>, float>::operator()()
+            |                                |          
+            |                                 --6.72%--float std::_V2::generate_canonical<float, 24ul, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+            |                                           |          
+            |                                            --5.89%--float std::__generate_canonical_pow2<float, 24ul, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+            |                                                      |          
+            |                                                       --3.90%--std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()()
+            |                                                                 |          
+            |                                                                  --2.83%--std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand()
+            |          
+             --0.50%--_start
+                       __libc_start_main@@GLIBC_2.34
+                       __libc_start_call_main
+                       main
+
+     9.91%     1.36%  tree_benchmark_  tree_benchmark_O0     [.] float std::uniform_real_distribution<float>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_real_distribution<float>::param_type const&)
+            |          
+            |--8.54%--float std::uniform_real_distribution<float>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_real_distribution<float>::param_type const&)
+            |          |          
+            |           --7.12%--std::__detail::_Adaptor<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>, float>::operator()()
+            |                     |          
+            |                      --6.72%--float std::_V2::generate_canonical<float, 24ul, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+            |                                |          
+            |                                 --5.89%--float std::__generate_canonical_pow2<float, 24ul, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+            |                                           |          
+            |                                            --3.90%--std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()()
+            |                                                      |          
+            |                                                       --2.83%--std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand()
+            |          
+             --1.36%--_start
+                       __libc_start_main@@GLIBC_2.34
+                       __libc_start_call_main
+                       main
+                       |          
+                        --1.22%--float std::uniform_real_distribution<float>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+
+     7.71%     0.56%  tree_benchmark_  tree_benchmark_O0     [.] std::__detail::_Adaptor<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>, float>::operator()()
+            |          
+            |--7.15%--std::__detail::_Adaptor<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>, float>::operator()()
+            |          |          
+            |           --6.72%--float std::_V2::generate_canonical<float, 24ul, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+            |                     |          
+            |                      --5.89%--float std::__generate_canonical_pow2<float, 24ul, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+            |                                |          
+            |                                 --3.90%--std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()()
+            |                                           |          
+            |                                            --2.83%--std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand()
+            |          
+             --0.56%--_start
+                       __libc_start_main@@GLIBC_2.34
+                       __libc_start_call_main
+                       main
+                       float std::uniform_real_distribution<float>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+                       float std::uniform_real_distribution<float>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_real_distribution<float>::param_type const&)
+
+     7.19%     0.44%  tree_benchmark_  tree_benchmark_O0     [.] float std::_V2::generate_canonical<float, 24ul, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+            |          
+             --6.76%--float std::_V2::generate_canonical<float, 24ul, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+                       |          
+                        --5.89%--float std::__generate_canonical_pow2<float, 24ul, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+                                  |          
+                                   --3.90%--std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()()
+                                             |          
+                                              --2.83%--std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand()
+
+     6.51%     2.20%  tree_benchmark_  tree_benchmark_O0     [.] float std::__generate_canonical_pow2<float, 24ul, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+            |          
+            |--4.31%--float std::__generate_canonical_pow2<float, 24ul, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+            |          |          
+            |           --3.90%--std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()()
+            |                     |          
+            |                      --2.83%--std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand()
+            |          
+             --2.20%--_start
+                       __libc_start_main@@GLIBC_2.34
+                       __libc_start_call_main
+                       main
+                       float std::uniform_real_distribution<float>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+                       float std::uniform_real_distribution<float>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_real_distribution<float>::param_type const&)
+                       std::__detail::_Adaptor<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>, float>::operator()()
+                       |          
+                        --2.10%--float std::_V2::generate_canonical<float, 24ul, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+                                  |          
+                                   --1.71%--float std::__generate_canonical_pow2<float, 24ul, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+
+     4.19%     1.24%  tree_benchmark_  tree_benchmark_O0     [.] std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()()
+            |          
+            |--2.96%--std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()()
+            |          |          
+            |          |--2.30%--0x40173c
+            |          |          
+            |           --0.54%--std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand()
+            |          
+             --1.24%--_start
+                       |          
+                        --1.02%--0x7fcc7ab09798
+                                  0x7fcc7ab09681
+                                  0x400657
+                                  0x400ab9
+                                  0x400e54
+                                  0x4010c5
+                                  0x40126f
+                                  |          
+                                   --0.98%--0x401415
+                                             |          
+                                              --0.88%--0x4015e4
+
+     2.83%     2.83%  tree_benchmark_  tree_benchmark_O0     [.] std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand()
+            |
+            ---_start
+               |          
+               |--2.30%--0x7fcc7ab09798
+               |          0x7fcc7ab09681
+               |          0x400657
+               |          0x400ab9
+               |          0x400e54
+               |          0x4010c5
+               |          0x40126f
+               |          0x401415
+               |          0x401597
+               |          0x40173c
+               |          
+                --0.54%--__libc_start_main@@GLIBC_2.34
+                          __libc_start_call_main
+                          main
+                          float std::uniform_real_distribution<float>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+                          float std::uniform_real_distribution<float>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_real_distribution<float>::param_type const&)
+                          std::__detail::_Adaptor<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>, float>::operator()()
+                          float std::_V2::generate_canonical<float, 24ul, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+                          float std::__generate_canonical_pow2<float, 24ul, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+                          std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()()
+                          std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand()
+
+     1.01%     0.00%  tree_benchmark_  tree_benchmark_O0     [.] float* std::__uninitialized_default_n_1<true>::__uninit_default_n<float*, unsigned long>(float*, unsigned long)
+            |
+            ---void std::__fill_a<float*, float>(float*, float*, float const&) (inlined)
+               |          
+                --0.70%--0x401397
+                          |          
+                           --0.63%--0x401397
+
+     0.66%     0.40%  tree_benchmark_  tree_benchmark_O0     [.] std::uniform_real_distribution<float>::param_type::a() const
+     0.54%     0.34%  tree_benchmark_  tree_benchmark_O0     [.] std::__detail::_Adaptor<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>, float>::_Adaptor(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+     0.43%     0.29%  tree_benchmark_  tree_benchmark_O0     [.] std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::min()
+     0.39%     0.36%  tree_benchmark_  tree_benchmark_O0     [.] void std::__fill_a1<float*, float>(float*, float*, float const&)
+     0.39%     0.00%  tree_benchmark_  tree_benchmark_O0     [.] std::vector<float, std::allocator<float> >::vector(unsigned long, std::allocator<float> const&)
+     0.39%     0.00%  tree_benchmark_  tree_benchmark_O0     [.] std::vector<float, std::allocator<float> >::_M_default_initialize(unsigned long)
+     0.39%     0.00%  tree_benchmark_  tree_benchmark_O0     [.] float* std::__uninitialized_default_n_a<float*, unsigned long, float>(float*, unsigned long, std::allocator<float>&)
+     0.39%     0.00%  tree_benchmark_  tree_benchmark_O0     [.] float* std::__uninitialized_default_n<float*, unsigned long>(float*, unsigned long)
+     0.33%     0.10%  tree_benchmark_  tree_benchmark_O0     [.] std::uniform_real_distribution<float>::param_type::b() const
+     0.17%     0.00%  tree_benchmark_  tree_benchmark_O0     [.] float* std::__fill_n_a<float*, unsigned long, float>(float*, unsigned long, float const&, std::random_access_iterator_tag) (inlined)
+     0.15%     0.00%  tree_benchmark_  tree_benchmark_O0     [.] float* std::fill_n<float*, unsigned long, float>(float*, unsigned long, float const&) (inlined)
+     0.15%     0.00%  tree_benchmark_  tree_benchmark_O0     [.] float* std::__fill_n_a<float*, unsigned long, float>(float*, unsigned long, float const&, std::random_access_iterator_tag) (inlined)
+     0.08%     0.00%  tree_benchmark_  tree_benchmark_O0     [.] std::allocator<float>::~allocator() (inlined)
+     0.08%     0.00%  tree_benchmark_  tree_benchmark_O0     [.] void std::__fill_a<float*, float>(float*, float*, float const&) (inlined)
+     0.08%     0.00%  tree_benchmark_  [unknown]             [.] 0xffffffffbbe01280
+     0.07%     0.00%  tree_benchmark_  tree_benchmark_O0     [.] std::allocator<float>::~allocator() (inlined)
+     0.06%     0.00%  tree_benchmark_  tree_benchmark_O0     [.] __gnu_cxx::operator!=(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > > const&, __gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > > const&) (inlined)
+     0.03%     0.00%  tree_benchmark_  tree_benchmark_O0     [.] __gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >::operator++() (inlined)
+     0.02%     0.02%  tree_benchmark_  [unknown]             [k] 0xffffffffbbe01968
+     0.02%     0.00%  tree_benchmark_  tree_benchmark_O0     [.] __gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >::operator*() const (inlined)
+     0.00%     0.00%  tree_benchmark_  ld-linux-x86-64.so.2  [.] _dl_start_user
+     0.00%     0.00%  tree_benchmark_  ld-linux-x86-64.so.2  [.] _dl_start
+     0.00%     0.00%  tree_benchmark_  ld-linux-x86-64.so.2  [.] _dl_relocate_object_no_relro
+     0.00%     0.00%  tree_benchmark_  ld-linux-x86-64.so.2  [.] _dl_start_final (inlined)
+     0.00%     0.00%  tree_benchmark_  ld-linux-x86-64.so.2  [.] _dl_sysdep_start
+     0.00%     0.00%  tree_benchmark_  ld-linux-x86-64.so.2  [.] dl_main
+     0.00%     0.00%  tree_benchmark_  ld-linux-x86-64.so.2  [.] _dl_relocate_object
+     0.00%     0.00%  tree_benchmark_  ld-linux-x86-64.so.2  [.] elf_dynamic_do_Rela (inlined)
+     0.00%     0.00%  tree_benchmark_  ld-linux-x86-64.so.2  [.] elf_machine_rela (inlined)
+     0.00%     0.00%  tree_benchmark_  ld-linux-x86-64.so.2  [.] resolve_map (inlined)
+     0.00%     0.00%  tree_benchmark_  ld-linux-x86-64.so.2  [.] do_lookup_x
+     0.00%     0.00%  tree_benchmark_  libstdc++.so.6.0.36   [.] std::ios_base::Init::Init()@plt
+     0.00%     0.00%  tree_benchmark_  ld-linux-x86-64.so.2  [.] _dl_init
+     0.00%     0.00%  tree_benchmark_  ld-linux-x86-64.so.2  [.] _dl_lookup_symbol_x
+
+
+#
+# (Tip: To see how parallelism changes over time, try: perf report -F time,latency,parallelism --time-quantum=1s)
+#

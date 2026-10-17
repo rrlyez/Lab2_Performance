@@ -1,0 +1,269 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 51  of event 'cpu_atom/cycles/Pu'
+# Event count (approx.): 72430799
+#
+# Overhead  Symbol                                                                                   IPC   [IPC Coverage]
+# ........  .......................................................................................  ....................
+#
+    30.42%  [.] count_less_than_threshold(std::vector<float, std::allocator<float> > const&, float)  -      -            
+            |          
+            |--29.26%--count_less_than_threshold(std::vector<float, std::allocator<float> > const&, float)
+            |          main
+            |          __libc_start_call_main
+            |          __libc_start_main@@GLIBC_2.34
+            |          _start
+            |          
+             --1.16%--std::vector<float, std::allocator<float> >::size() const
+                       main
+                       __libc_start_call_main
+                       __libc_start_main@@GLIBC_2.34
+                       _start
+
+    30.39%  [.] void std::__fill_a1<float*, float>(float*, float*, float const&)                     -      -            
+            |          
+            |--21.74%--void std::__fill_a1<float*, float>(float*, float*, float const&)
+            |          void std::__fill_a<float*, float>(float*, float*, float const&) (inlined)
+            |          float* std::__fill_n_a<float*, unsigned long, float>(float*, unsigned long, float const&, std::random_access_iterator_tag) (inlined)
+            |          float* std::fill_n<float*, unsigned long, float>(float*, unsigned long, float const&) (inlined)
+            |          float* std::__uninitialized_default_n_1<true>::__uninit_default_n<float*, unsigned long>(float*, unsigned long)
+            |          float* std::__uninitialized_default_n<float*, unsigned long>(float*, unsigned long)
+            |          float* std::__uninitialized_default_n_a<float*, unsigned long, float>(float*, unsigned long, std::allocator<float>&)
+            |          std::vector<float, std::allocator<float> >::_M_default_initialize(unsigned long)
+            |          std::vector<float, std::allocator<float> >::vector(unsigned long, std::allocator<float> const&)
+            |          std::allocator<float>::~allocator() (inlined)
+            |          main
+            |          __libc_start_call_main
+            |          __libc_start_main@@GLIBC_2.34
+            |          _start
+            |          
+             --8.65%--0xffffffffbbe01280
+                       void std::__fill_a1<float*, float>(float*, float*, float const&)
+                       void std::__fill_a<float*, float>(float*, float*, float const&) (inlined)
+                       float* std::__fill_n_a<float*, unsigned long, float>(float*, unsigned long, float const&, std::random_access_iterator_tag) (inlined)
+                       float* std::fill_n<float*, unsigned long, float>(float*, unsigned long, float const&) (inlined)
+                       float* std::__uninitialized_default_n_1<true>::__uninit_default_n<float*, unsigned long>(float*, unsigned long)
+                       float* std::__uninitialized_default_n<float*, unsigned long>(float*, unsigned long)
+                       float* std::__uninitialized_default_n_a<float*, unsigned long, float>(float*, unsigned long, std::allocator<float>&)
+                       std::vector<float, std::allocator<float> >::_M_default_initialize(unsigned long)
+                       std::vector<float, std::allocator<float> >::vector(unsigned long, std::allocator<float> const&)
+                       std::allocator<float>::~allocator() (inlined)
+                       main
+                       __libc_start_call_main
+                       __libc_start_main@@GLIBC_2.34
+                       _start
+
+    22.37%  [.] std::vector<float, std::allocator<float> >::size() const                             -      -            
+            |          
+            |--8.13%--std::vector<float, std::allocator<float> >::operator[](unsigned long) const
+            |          count_less_than_threshold(std::vector<float, std::allocator<float> > const&, float)
+            |          main
+            |          __libc_start_call_main
+            |          __libc_start_main@@GLIBC_2.34
+            |          _start
+            |          
+            |--7.48%--count_less_than_threshold(std::vector<float, std::allocator<float> > const&, float)
+            |          main
+            |          __libc_start_call_main
+            |          __libc_start_main@@GLIBC_2.34
+            |          _start
+            |          
+             --6.77%--main
+                       __libc_start_call_main
+                       __libc_start_main@@GLIBC_2.34
+                       _start
+
+     7.81%  [.] std::vector<float, std::allocator<float> >::operator[](unsigned long) const          -      -            
+            |          
+            |--4.29%--main
+            |          __libc_start_call_main
+            |          __libc_start_main@@GLIBC_2.34
+            |          _start
+            |          
+             --3.52%--count_less_than_threshold(std::vector<float, std::allocator<float> > const&, float)
+                       main
+                       __libc_start_call_main
+                       __libc_start_main@@GLIBC_2.34
+                       _start
+
+     3.54%  [.] do_lookup_x                                                                          -      -            
+            |
+            ---_dl_lookup_symbol_x
+               resolve_map (inlined)
+               elf_machine_rela (inlined)
+               elf_dynamic_do_Rela (inlined)
+               _dl_relocate_object_no_relro
+               _dl_relocate_object
+               dl_main
+               _dl_sysdep_start
+               _dl_start_final (inlined)
+               _dl_start
+               _dl_start_user
+
+     1.71%  [.] _dl_relocate_object_no_relro                                                         -      -            
+            |          
+             --1.02%--resolve_map (inlined)
+                       elf_machine_rela (inlined)
+                       elf_dynamic_do_Rela (inlined)
+                       _dl_relocate_object_no_relro
+                       _dl_relocate_object
+                       dl_main
+                       _dl_sysdep_start
+                       _dl_start_final (inlined)
+                       _dl_start
+                       _dl_start_user
+
+     1.38%  [.] _dl_lookup_symbol_x                                                                  -      -            
+            |
+            ---_dl_lookup_symbol_x
+               resolve_map (inlined)
+               elf_machine_rela (inlined)
+               elf_dynamic_do_Rela (inlined)
+               _dl_relocate_object_no_relro
+               _dl_relocate_object
+               dl_main
+               _dl_sysdep_start
+               _dl_start_final (inlined)
+               _dl_start
+               _dl_start_user
+
+     1.14%  [.] __init_misc                                                                          -      -            
+            |
+            ---_dl_init
+               _dl_start_user
+
+
+
+# Samples: 18K of event 'cpu_core/cycles/Pu'
+# Event count (approx.): 78063869204
+#
+# Overhead  Symbol                                                                                                                                                                                                                                                                                                                                                                                                                                                           IPC   [IPC Coverage]
+# ........  ...............................................................................................................................................................................................................................................................................................................................................................................................................................................................  ....................
+#
+    33.34%  [.] count_less_than_threshold(std::vector<float, std::allocator<float> > const&, float)                                                                                                                                                                                                                                                                                                                                                                          -      -            
+            |          
+            |--27.16%--count_less_than_threshold(std::vector<float, std::allocator<float> > const&, float)
+            |          main
+            |          __libc_start_call_main
+            |          __libc_start_main@@GLIBC_2.34
+            |          _start
+            |          
+            |--3.56%--std::vector<float, std::allocator<float> >::size() const
+            |          main
+            |          __libc_start_call_main
+            |          __libc_start_main@@GLIBC_2.34
+            |          _start
+            |          
+             --2.62%--std::vector<float, std::allocator<float> >::operator[](unsigned long) const
+                       main
+                       __libc_start_call_main
+                       __libc_start_main@@GLIBC_2.34
+                       _start
+
+    29.74%  [.] std::vector<float, std::allocator<float> >::size() const                                                                                                                                                                                                                                                                                                                                                                                                     -      -            
+            |          
+            |--24.01%--std::vector<float, std::allocator<float> >::size() const
+            |          |          
+            |          |--14.78%--count_less_than_threshold(std::vector<float, std::allocator<float> > const&, float)
+            |          |          main
+            |          |          __libc_start_call_main
+            |          |          __libc_start_main@@GLIBC_2.34
+            |          |          _start
+            |          |          
+            |           --8.59%--std::vector<float, std::allocator<float> >::operator[](unsigned long) const
+            |                     count_less_than_threshold(std::vector<float, std::allocator<float> > const&, float)
+            |                     main
+            |                     __libc_start_call_main
+            |                     __libc_start_main@@GLIBC_2.34
+            |                     _start
+            |          
+            |--2.96%--count_less_than_threshold(std::vector<float, std::allocator<float> > const&, float)
+            |          main
+            |          __libc_start_call_main
+            |          __libc_start_main@@GLIBC_2.34
+            |          _start
+            |          
+             --2.77%--std::vector<float, std::allocator<float> >::operator[](unsigned long) const
+                       count_less_than_threshold(std::vector<float, std::allocator<float> > const&, float)
+                       main
+                       __libc_start_call_main
+                       __libc_start_main@@GLIBC_2.34
+                       _start
+
+    25.32%  [.] std::vector<float, std::allocator<float> >::operator[](unsigned long) const                                                                                                                                                                                                                                                                                                                                                                                  -      -            
+            |          
+            |--16.82%--std::vector<float, std::allocator<float> >::operator[](unsigned long) const
+            |          |          
+            |          |--13.18%--count_less_than_threshold(std::vector<float, std::allocator<float> > const&, float)
+            |          |          main
+            |          |          __libc_start_call_main
+            |          |          __libc_start_main@@GLIBC_2.34
+            |          |          _start
+            |          |          
+            |           --3.63%--main
+            |                     __libc_start_call_main
+            |                     __libc_start_main@@GLIBC_2.34
+            |                     _start
+            |          
+            |--5.88%--std::vector<float, std::allocator<float> >::size() const
+            |          count_less_than_threshold(std::vector<float, std::allocator<float> > const&, float)
+            |          main
+            |          __libc_start_call_main
+            |          __libc_start_main@@GLIBC_2.34
+            |          _start
+            |          
+             --2.63%--count_less_than_threshold(std::vector<float, std::allocator<float> > const&, float)
+                       main
+                       __libc_start_call_main
+                       __libc_start_main@@GLIBC_2.34
+                       _start
+
+     2.83%  [.] std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand()                                                                                                                                                                                                                                                                            -      -            
+            |
+            ---std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()()
+               float std::__generate_canonical_pow2<float, 24ul, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+               float std::_V2::generate_canonical<float, 24ul, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+               std::__detail::_Adaptor<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>, float>::operator()()
+               float std::uniform_real_distribution<float>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_real_distribution<float>::param_type const&)
+               float std::uniform_real_distribution<float>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+               main
+               __libc_start_call_main
+               __libc_start_main@@GLIBC_2.34
+               _start
+
+     2.20%  [.] float std::__generate_canonical_pow2<float, 24ul, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)                                                                  -      -            
+            |          
+             --1.81%--float std::__generate_canonical_pow2<float, 24ul, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+                       |          
+                        --1.71%--float std::_V2::generate_canonical<float, 24ul, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+                                  std::__detail::_Adaptor<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>, float>::operator()()
+                                  float std::uniform_real_distribution<float>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_real_distribution<float>::param_type const&)
+                                  float std::uniform_real_distribution<float>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+                                  main
+                                  __libc_start_call_main
+                                  __libc_start_main@@GLIBC_2.34
+                                  _start
+
+     1.36%  [.] float std::uniform_real_distribution<float>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_real_distribution<float>::param_type const&)  -      -            
+     1.24%  [.] std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()()                                                                                                                                                                                                                                                                             -      -            
+            |          
+             --1.13%--std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()()
+                       |          
+                        --1.07%--float std::__generate_canonical_pow2<float, 24ul, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+                                  float std::_V2::generate_canonical<float, 24ul, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+                                  std::__detail::_Adaptor<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>, float>::operator()()
+                                  float std::uniform_real_distribution<float>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_real_distribution<float>::param_type const&)
+                                  float std::uniform_real_distribution<float>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+                                  main
+                                  __libc_start_call_main
+                                  __libc_start_main@@GLIBC_2.34
+                                  _start
+
+
+
+#
+# (Tip: To see call chains by final symbol taking CPU time (bottom up) use perf report -G)
+#

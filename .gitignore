@@ -1,0 +1,6 @@
+﻿benchmark/perf_dwarf.data
+**/__pycache__/
+**/.venv/
+**/venv/
+**/.idea/
+*.pyc

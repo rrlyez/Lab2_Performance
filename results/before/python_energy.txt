@@ -1,0 +1,24 @@
+Idle baseline: please wait 15 seconds...
+Running benchmark...
+Repetitions: 3
+Decision Tree Test Accuracy: 89.02%
+Random Forest Test Accuracy: 87.70%
+XGBoost Test Accuracy: 91.37%
+Python wall time: 22.7717 s
+
+Idle duration: 15.0003 s
+Benchmark duration: 23.6844 s
+
+Zone: package-0
+Idle energy: 44.0391 J
+Idle average power: 2.9359 W
+Energy during benchmark: 415.5907 J
+Average power during benchmark: 17.5470 W
+Estimated energy above idle: 346.0562 J
+
+Zone: psys
+Idle energy: 7.7143 J
+Idle average power: 0.5143 W
+Energy during benchmark: 30.4142 J
+Average power during benchmark: 1.2841 W
+Estimated energy above idle: 18.2339 J

@@ -1,0 +1,35 @@
+Total count: 199934980
+Execution time: 0.0994543 s
+Total count: 199934980
+Execution time: 0.0754324 s
+Total count: 199934980
+Execution time: 0.0933291 s
+
+ Performance counter stats for './tree_benchmark_O3' (3 runs):
+
+                 0      context-switches:u               #      0.0 cs/sec  cs_per_second     
+                 0      cpu-migrations:u                 #      0.0 migrations/sec  migrations_per_second
+            19,668      page-faults:u                    # 129383.0 faults/sec  page_faults_per_second
+            152.01 msec task-clock:u                     #      nan CPUs  CPUs_utilized         ( +-  4.27% )
+         9,940,965      cpu_core/L1-dcache-load-misses/u #      nan %  l1d_miss_rate            ( +- 50.08% )  (79.32%)
+         5,373,908      cpu_core/LLC-loads/u             #     99.4 %  llc_miss_rate            ( +- 49.76% )  (68.99%)
+            86,299      cpu_core/branch-misses/u         #      0.1 %  branch_miss_rate         ( +-  4.21% )  (59.88%)
+       136,104,600      cpu_core/branches/u              #    895.3 M/sec  branch_frequency     ( +-  4.73% )  (60.53%)
+       586,745,291      cpu_core/cpu-cycles/u            #      3.9 GHz  cycles_frequency       ( +-  2.86% )  (61.17%)
+     1,287,550,358      cpu_core/instructions/u          #      2.2 instructions  insn_per_cycle  ( +-  2.43% )  (51.02%)
+            38,199      cpu_atom/LLC-loads/u             #      2.4 %  llc_miss_rate            ( +- 50.06% )  (0.02%)
+           403,815      cpu_atom/branch-misses/u         #      4.0 %  branch_miss_rate         ( +- 52.73% )  (0.05%)
+         9,958,355      cpu_atom/branches/u              #     65.5 M/sec  branch_frequency     ( +- 72.81% )  (0.05%)
+        97,684,565      cpu_atom/cpu-cycles/u            #      0.6 GHz  cycles_frequency       ( +- 71.18% )  (0.05%)
+        15,987,669      cpu_atom/instructions/u          #      0.2 instructions  insn_per_cycle  ( +- 58.50% )  (0.03%)
+ TopdownL1 (cpu_core) #      2.1 %  tma_bad_speculation    
+                                                         #      5.7 %  tma_frontend_bound       ( +-  3.76% )  (79.41%)
+                                                         #     54.4 %  tma_backend_bound      
+                                                         #     37.7 %  tma_retiring             ( +-  1.79% )  (79.41%)
+ TopdownL1 (cpu_atom) #      nan %  tma_backend_bound        ( +-100.00% )  (0.00%)
+                                                         #      nan %  tma_frontend_bound       ( +-100.00% )  (0.00%)
+                                                         #      nan %  tma_bad_speculation    
+                                                         #      nan %  tma_retiring             ( +-100.00% )  (0.00%)
+
+       0.152680140 +- 0.006529973 seconds time elapsed  ( +-  4.28% )
+

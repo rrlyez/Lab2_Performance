@@ -1,0 +1,2 @@
+Total count: 199934980
+Execution time: 0.0763976 s

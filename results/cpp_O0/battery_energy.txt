@@ -1,0 +1,12 @@
+Version: O0
+Power source: battery
+Runs: 9
+Energy before: 54530000 uWh
+Energy after: 54150000 uWh
+Batch duration: 64.0744 s
+System batch energy: 1368.0000 J
+System average power: 21.3502 W
+Mean duration per run: 7.1194 s
+Mean system energy per run: 152.0000 J
+Estimated energy above idle per run: 28.1235 J
+Method: battery energy drop; idle subtraction is an estimate.
